@@ -113,7 +113,7 @@ button {
 
 .log {
   height: calc(50vh - 120px);
-  /* width: 100vw; */
+  width: 100vw;
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
   font-size: 0.8em;
   border-width: 1px;
@@ -124,6 +124,24 @@ button {
 }
 
 .chart-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+  height:40vh;
+  width: 100%;
+  margin: 10px auto;
+  gap: 10px;
+}
+
+#plot1 {
+  position: relative;
+  height:40vh;
+  width: 100%;
+  margin: 10px auto;
+  gap: 10px;
+}
+
+#joystick {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
