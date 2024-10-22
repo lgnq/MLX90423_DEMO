@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Online DEMO</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+      // Redirect to HTTPS if HTTP is requested.
+      if (window.location.protocol === 'http:') {
+        window.location.href = 'https:' + window.location.href.substring(5);
+      }
+    </script>
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://threejs.org/build/three.module.js",
+                "objloader": "https://threejs.org/examples/jsm/loaders/OBJLoader.js"
+            }
+        }
+    </script>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light.css" id="light" class="alternate" disabled>
+    <link rel="stylesheet" href="css/dark.css"  id="dark"  class="alternate" disabled>
+
+    <!-- import the webpage's javascript file -->
+    <script type="module" src="js/script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <h1>An online demo using web serial API</h1>
+    </header>
+    
+    <main class="main">
+      <div id="notSupported" class="notSupported">
+        Sorry, <b>Web Serial</b> is not supported on this device, make sure you're
+        running Chrome 78 or later and have enabled the
+        <code>#enable-experimental-web-platform-features</code> flag in
+        <code>chrome://flags</code>
+      </div>
+
+      <!-- <div id="webGLnotSupported" class="notSupported">
+        Sorry, <b>WebGL</b> is not supported on this device.
+      </div> -->
+
+      <div class="controls">
+        <button id="butConnect" type="button">Connect</button>
+        <select id="baudRate"></select>
+        <span>
+          <select id="angle_type">
+            <option value="quaternion">Quaternions</option>
+            <option value="euler">Euler Angles</option>
+          </select>
+         </span>
+        <input type="checkbox" id="darkmode"> Dark Mode
+      </div>
+
+      <div class="controls">
+        <label for="messageprefixid">Message Prefix:</label>
+        <input type="text" id="messageprefixid" value="Orientation:">
+
+        <label for="messageseparatorid">Message Separator:</label>
+        <input type="text" id="messageseparatorid" value=",">
+      </div>            
+
+      <div class="controls">
+        <label for="plotid">Plot ID:</label>
+        <input type="text" id="plotid">
+
+        <label for="traceid">Trace ID:</label>
+        <input type="text" id="traceid">
+
+        <label for="tracedataid">Trace Data:</label>
+        <input type="text" id="tracedataid" value="0">
+
+        <button id="butAddtrace" type="button">Add Trace</button>
+        <button id="butAddplot" type="button">Add Plot</button>
+      </div>            
+
+      <!-- <div id="log-container" class="row">
+        <div id="log" class="log"></div>
+        <div id="calibration" class="calibration-container"></div>
+      </div> -->
+
+      <div class="controls">
+        <label for="fname">Input:</label>
+        <input type="text" id="myInput">
+
+        <input type="checkbox" id="autoscroll"> Autoscroll
+        <input type="checkbox" id="showTimestamp"> Show Timestamp
+        <input type="checkbox" id="kalmanfilter"> Kalman Filter
+        <button id="butClear" type="button">Clear</button>
+      </div>
+
+      <div class="chart-container" id="chart1">
+        <div id="joystick" style="display: block;"></div>     
+        <div id="plot1" style="height: 100%;"></div>
+        <div id="log" class="log"></div>
+      </div>
+
+      <!--<textarea id="log" readonly></textarea>-->
+    </main>
+
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.min.js"></script>
+
+  </body>
+</html>
