@@ -615,7 +615,7 @@ var w = parent.innerWidth -100;
 var data = [
   {
     type: "indicator",
-    mode: "number+gauge+delta",
+    mode: "number+gauge",
     gauge: { shape: "bullet" },
     delta: { reference: 300 },
     value: 220,
