@@ -242,7 +242,7 @@ async function readLoop() {
       Plotly.extendTraces(plots[i], {y:[[x], [y], [z]]}, [0, 1, 2], 300);
     }
 
-    Plotly.update('linear_chart', {value: x.toFixed(3)}, {}, [0]);
+    Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
 
     angle_xz = Math.atan2(z, x);
 
@@ -610,7 +610,7 @@ function saveSetting(setting, value) {
 // }
 // var myp5 = new p5(j, 'joystick')
 
-var w = parent.innerWidth;
+var w = parent.innerWidth -100;
 
 var data = [
   {
