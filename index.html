@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Online DEMO</title>
+    <title>MLX90423 Online DEMO</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,7 +30,7 @@
   </head>
   <body>
     <header class="header">
-      <h1>An online demo using web serial API</h1>
+      <h1>MLX90423 online demo using web serial API</h1>
     </header>
     
     <main class="main">
@@ -79,11 +79,6 @@
         <button id="butAddplot" type="button">Add Plot</button>
       </div>            
 
-      <!-- <div id="log-container" class="row">
-        <div id="log" class="log"></div>
-        <div id="calibration" class="calibration-container"></div>
-      </div> -->
-
       <div class="controls">
         <label for="fname">Input:</label>
         <input type="text" id="myInput">
@@ -95,10 +90,11 @@
       </div>
 
       <div class="chart-container" id="chart1">
-        <div id="joystick" style="display: block;"></div>     
         <div id="plot1" style="height: 100%;"></div>
         <div id="log" class="log"></div>
       </div>
+
+      <div id="joystick" style="display: block;"></div>     
 
       <!--<textarea id="log" readonly></textarea>-->
     </main>
