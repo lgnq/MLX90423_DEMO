@@ -112,7 +112,8 @@ button {
 }
 
 .log {
-  height: calc(50vh - 120px);
+  /* height: calc(50vh - 120px); */
+  height: 30vh;
   width: 100vw;
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
   font-size: 0.8em;
@@ -142,8 +143,6 @@ button {
 }
 
 #joystick {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   position: relative;
   height:30vh;
   width: 100%;

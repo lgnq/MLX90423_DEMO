@@ -65,7 +65,7 @@ let layout_xyz = {
   autosize: true,
   // margin: { t: 5, b: 5, l: 5, r: 5 },
 
-  title: 'XYZ Plot',
+  title: 'MLX90423 Output(PWM)',
   
   xaxis: {
     title: 'time',
@@ -74,7 +74,7 @@ let layout_xyz = {
   },
 
   yaxis: {
-    title: 'Magnetic Flux(uT)',
+    title: 'Duty Cycle(%)',
     showline: false
   }  
 };
