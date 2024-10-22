@@ -568,42 +568,75 @@ function saveSetting(setting, value) {
   window.localStorage.setItem(setting, JSON.stringify(value));
 }
 
-var j = function(p)
-{
-  let width = 400;
+// var j = function(p)
+// {
+//   let width = 400;
 
-  /** The maximum stick deflection angle, in radians */
-  const MAX_DEFLECT = Math.PI / 8;
+//   /** The maximum stick deflection angle, in radians */
+//   const MAX_DEFLECT = Math.PI / 8;
 
-  p.setup = function() 
-  {
-    var h = parent.innerHeight/2 - 120;
-    var w = parent.innerWidth;
+//   p.setup = function() 
+//   {
+//     var h = parent.innerHeight/2 - 120;
+//     var w = parent.innerWidth;
 
-    p.createCanvas(w, 400, p.WEBGL);
+//     p.createCanvas(w, 400, p.WEBGL);
+//   }
+
+//   p.draw = function() 
+//   {
+//     const stickLen = width * 0.3;
+
+//     p.background(0xFF, 0xFF, 0xFF);
+
+//     p.ambientLight(128);
+//     p.directionalLight(200, 200, 200, 100, 150, -1);  // A white light from behind the viewer
+//     p.ambientMaterial(192);
+
+//     p.sphere(60);
+
+//     p.rotateX(-Math.PI / 2);
+
+//     p.rotateX(p.map(beta-90, -25, 25, -MAX_DEFLECT, MAX_DEFLECT));
+//     p.rotateZ(p.map(alpha-90, -25, 25, -MAX_DEFLECT, MAX_DEFLECT));
+
+//     p.translate(0, -stickLen / 2, 0);
+//     p.noStroke();
+
+//     p.cylinder(stickLen / 7, stickLen);
+//   }
+// }
+// var myp5 = new p5(j, 'joystick')
+
+var trace1 = {
+  x: [20, 14, 23],
+  y: ['giraffes', 'orangutans', 'monkeys'],
+  name: 'SF Zoo',
+  orientation: 'h',
+  marker: {
+    color: 'rgba(55,128,191,0.6)',
+    width: 1
+  },
+  type: 'bar'
+};
+
+var trace2 = {
+  x: [12, 18, 29],
+  y: ['giraffes', 'orangutans', 'monkeys'],
+  name: 'LA Zoo',
+  orientation: 'h',
+  type: 'bar',
+  marker: {
+    color: 'rgba(255,153,51,0.6)',
+    width: 1
   }
+};
 
-  p.draw = function() 
-  {
-    const stickLen = width * 0.3;
+var data = [trace1, trace2];
 
-    p.background(0xFF, 0xFF, 0xFF);
+var layout = {
+  title: 'Colored Bar Chart',
+  barmode: 'stack'
+};
 
-    p.ambientLight(128);
-    p.directionalLight(200, 200, 200, 100, 150, -1);  // A white light from behind the viewer
-    p.ambientMaterial(192);
-
-    p.sphere(60);
-
-    p.rotateX(-Math.PI / 2);
-
-    p.rotateX(p.map(beta-90, -25, 25, -MAX_DEFLECT, MAX_DEFLECT));
-    p.rotateZ(p.map(alpha-90, -25, 25, -MAX_DEFLECT, MAX_DEFLECT));
-
-    p.translate(0, -stickLen / 2, 0);
-    p.noStroke();
-
-    p.cylinder(stickLen / 7, stickLen);
-  }
-}
-var myp5 = new p5(j, 'joystick')
+Plotly.newPlot('chart', data, layout);
