@@ -127,7 +127,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  height:40vh;
+  height:30vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
@@ -135,7 +135,7 @@ button {
 
 #plot1 {
   position: relative;
-  height:40vh;
+  height:30vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
@@ -145,7 +145,7 @@ button {
   display: grid;
   grid-template-columns: 1fr 1fr;
   position: relative;
-  height:40vh;
+  height:30vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
