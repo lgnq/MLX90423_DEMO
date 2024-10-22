@@ -610,7 +610,7 @@ function saveSetting(setting, value) {
 // }
 // var myp5 = new p5(j, 'joystick')
 
-var w = parent.innerWidth -100;
+var w = parent.innerWidth;
 
 var data = [
   {
