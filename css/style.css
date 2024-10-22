@@ -124,19 +124,9 @@ button {
   transition : color 0.1s linear;
 }
 
-.chart-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  height:30vh;
-  width: 100%;
-  margin: 10px auto;
-  gap: 10px;
-}
-
 #plot1 {
   position: relative;
-  height:30vh;
+  height:25vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
@@ -144,7 +134,7 @@ button {
 
 #joystick {
   position: relative;
-  height:30vh;
+  height:25vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
