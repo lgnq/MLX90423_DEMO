@@ -620,7 +620,7 @@ var data = [
     delta: { reference: 300 },
     value: 220,
     domain: { x: [0, 1], y: [0, 1] },
-    title: { text: "Profit" }
+    title: { text: "Sensor 1" }
   },
   // {
   //   type: "indicator",
