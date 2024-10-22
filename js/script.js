@@ -608,35 +608,17 @@ function saveSetting(setting, value) {
 // }
 // var myp5 = new p5(j, 'joystick')
 
-var trace1 = {
-  x: [20, 14, 23],
-  y: ['giraffes', 'orangutans', 'monkeys'],
-  name: 'SF Zoo',
-  orientation: 'h',
-  marker: {
-    color: 'rgba(55,128,191,0.6)',
-    width: 1
-  },
-  type: 'bar'
-};
-
-var trace2 = {
-  x: [12, 18, 29],
-  y: ['giraffes', 'orangutans', 'monkeys'],
-  name: 'LA Zoo',
-  orientation: 'h',
-  type: 'bar',
-  marker: {
-    color: 'rgba(255,153,51,0.6)',
-    width: 1
+var data = [
+  {
+    type: "indicator",
+    mode: "number+gauge+delta",
+    gauge: { shape: "bullet" },
+    delta: { reference: 300 },
+    value: 220,
+    domain: { x: [0, 1], y: [0, 1] },
+    title: { text: "Profit" }
   }
-};
+];
 
-var data = [trace1, trace2];
-
-var layout = {
-  title: 'Colored Bar Chart',
-  barmode: 'stack'
-};
-
-Plotly.newPlot('chart', data, layout);
+var layout = { width: 600, height: 250 };
+Plotly.newPlot('chart', data, layout, config);
