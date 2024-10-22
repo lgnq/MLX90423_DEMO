@@ -622,15 +622,15 @@ var data = [
     domain: { x: [0, 1], y: [0, 1] },
     title: { text: "Profit" }
   },
-  {
-    type: "indicator",
-    mode: "number+gauge+delta",
-    gauge: { shape: "bullet" },
-    delta: { reference: 300 },
-    value: 220,
-    domain: { x: [0, 1], y: [0, 1] },
-    title: { text: "sensor2" }
-  }
+  // {
+  //   type: "indicator",
+  //   mode: "number+gauge+delta",
+  //   gauge: { shape: "bullet" },
+  //   delta: { reference: 300 },
+  //   value: 220,
+  //   domain: { x: [0, 1], y: [0, 1] },
+  //   title: { text: "sensor2" }
+  // }
 ];
 
 var layout = { width: w, height: 250 };
