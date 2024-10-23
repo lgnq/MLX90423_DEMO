@@ -242,8 +242,8 @@ async function readLoop() {
       Plotly.extendTraces(plots[i], {y:[[x], [y], [z]]}, [0, 1, 2], 300);
     }
 
-    Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
-    // Plotly.update('linear_chart', {value: [[orientations[0].toFixed(3)], [orientations[1].toFixed(3)], [orientations[2].toFixed(3)]]});
+    // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
+    Plotly.update('linear_chart', {value: [[orientations[0].toFixed(3)], [orientations[1].toFixed(3)], [orientations[2].toFixed(3)]]}, {}, [0, 1, 2]);
 
     angle_xz = Math.atan2(z, x);
 
