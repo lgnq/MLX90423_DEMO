@@ -242,6 +242,19 @@ async function readLoop() {
       Plotly.extendTraces(plots[i], {y:[[x], [y], [z]]}, [0, 1, 2], 300);
     }
 
+    data = [
+      {
+        value: x,
+      },
+      {
+        value: y,
+      },
+      {
+        value: z,
+      }
+    ];
+
+    Plotly.update('linear_chart', data);
     Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
     // Plotly.update('linear_chart', {value: [[orientations[0].toFixed(3)], [orientations[1].toFixed(3)], [orientations[2].toFixed(3)]]});
 
@@ -613,7 +626,7 @@ function saveSetting(setting, value) {
 
 var w = parent.innerWidth;
 
-var data = [
+let data = [
   {
     type: "indicator",
     mode: "number+gauge+delta",
