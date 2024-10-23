@@ -243,7 +243,7 @@ async function readLoop() {
     }
 
     // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
-    Plotly.update('linear_chart', {value: [[orientations[0].toFixed(3)], [orientations[1].toFixed(3)], [orientations[2].toFixed(3)]]}, {}, [0, 1, 2]);
+    Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3)]}, {}, [0, 1, 2]);
 
     angle_xz = Math.atan2(z, x);
 
@@ -645,7 +645,7 @@ let data = [
     title: { text: "Sensor 2" },
     gauge: {
       shape: "bullet",
-      axis: { range: [null, 100] },
+      axis: { range: [-300, 300] },
       threshold: {
         line: { color: "black", width: 2 },
         thickness: 0.75,
