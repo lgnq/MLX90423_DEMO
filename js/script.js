@@ -243,7 +243,7 @@ async function readLoop() {
     }
 
     // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
-    Plotly.update('linear_chart', {value: orientations[0].toFixed(3)});
+    Plotly.update('linear_chart', {value: [[orientations[0].toFixed(3)], [orientations[1].toFixed(3)], [orientations[2].toFixed(3)]]});
 
     angle_xz = Math.atan2(z, x);
 
@@ -620,10 +620,10 @@ var data = [
     value: 180,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.08, 0.25] },
-    title: { text: "Revenue" },
+    title: { text: "Sensor 1" },
     gauge: {
       shape: "bullet",
-      axis: { range: [null, 300] },
+      axis: { range: [-300, 300] },
       threshold: {
         line: { color: "black", width: 2 },
         thickness: 0.75,
@@ -631,10 +631,7 @@ var data = [
       },
       steps: [
         { range: [0, 150], color: "gray" },
-        {
-          range: [150, 250],
-          color: "lightgray"
-        }
+        { range: [150, 250], color: "lightgray"}
       ],
       bar: { color: "black" }
     }
@@ -645,7 +642,7 @@ var data = [
     value: 35,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.4, 0.6] },
-    title: { text: "Profit" },
+    title: { text: "Sensor 2" },
     gauge: {
       shape: "bullet",
       axis: { range: [null, 100] },
@@ -667,7 +664,7 @@ var data = [
     value: 220,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.7, 0.9] },
-    title: { text: "Satisfaction" },
+    title: { text: "Sensor 3" },
     gauge: {
       shape: "bullet",
       axis: { range: [null, 300] },
