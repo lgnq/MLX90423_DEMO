@@ -126,7 +126,7 @@ let trace_s = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'Z',
+  name: 'Sensor 4',
   line: {
     // color: 'rgb(55, 128, 191)',
     width: 1
@@ -720,7 +720,7 @@ let data = [
 ];
 
 var layout = {
-  width: 600, height: 250,
+  width: 1000, height: 500,
   margin: { t: 10, r: 25, l: 25, b: 10 }
 };
 Plotly.newPlot('linear_chart', data, layout);
