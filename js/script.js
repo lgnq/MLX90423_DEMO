@@ -634,7 +634,7 @@ let data = [
     mode: "number+gauge+delta",
     value: 180,
     delta: { reference: 200 },
-    domain: { x: [0.25, 1], y: [0.08, 0.25] },
+    domain: { x: [0.25, 1], y: [0.1, 0.2] },
     title: { text: "Sensor 1" },
     gauge: {
       shape: "bullet",
@@ -656,7 +656,7 @@ let data = [
     mode: "number+gauge+delta",
     value: 35,
     delta: { reference: 200 },
-    domain: { x: [0.25, 1], y: [0.4, 0.6] },
+    domain: { x: [0.25, 1], y: [0.3, 0.4] },
     title: { text: "Sensor 2" },
     gauge: {
       shape: "bullet",
@@ -678,7 +678,7 @@ let data = [
     mode: "number+gauge+delta",
     value: 220,
     delta: { reference: 200 },
-    domain: { x: [0.25, 1], y: [0.7, 0.9] },
+    domain: { x: [0.25, 1], y: [0.5, 0.6] },
     title: { text: "Sensor 3" },
     gauge: {
       shape: "bullet",
@@ -700,7 +700,7 @@ let data = [
     mode: "number+gauge+delta",
     value: 220,
     delta: { reference: 200 },
-    domain: { x: [0.25, 1], y: [0.7, 0.9] },
+    domain: { x: [0.25, 1], y: [0.7, 0.8] },
     title: { text: "Sensor 4" },
     gauge: {
       shape: "bullet",
