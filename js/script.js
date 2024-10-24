@@ -28,6 +28,7 @@ let plots = [];
 let x = 0;
 let y = 0;
 let z = 0;
+let s = 0;
 
 let angle_xy = 0;
 let angle_xz = 0;
@@ -39,7 +40,7 @@ let beta  = 0;
 let prefix;
 let separator;
 
-const maxLogLength  = 100;
+const maxLogLength  = 50;
 const baudRates     = [300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 115200, 230400, 250000, 500000, 1000000, 2000000];
 
 const log           = document.getElementById('log');
@@ -119,7 +120,20 @@ let trace_z = {
   }
 };
 
-let data_xyz = [trace_x, trace_y, trace_z];
+let trace_s = {
+  // type: 'line',
+  // type: 'scattergl',
+  // x: [0],
+  y: [0],
+  mode: 'lines',
+  name: 'Z',
+  line: {
+    // color: 'rgb(55, 128, 191)',
+    width: 1
+  }
+};
+
+let data_xyz = [trace_x, trace_y, trace_z, trace_s];
 
 document.addEventListener('DOMContentLoaded', async () => {
   butConnect.addEventListener('click', clickConnect);
@@ -236,14 +250,15 @@ async function readLoop() {
     x = orientations[0];
     y = orientations[1];
     z = orientations[2];
+    s = orientations[3];
 
     for (let i = 0; i < plots.length; i++)
     {
-      Plotly.extendTraces(plots[i], {y:[[x], [y], [z]]}, [0, 1, 2], 300);
+      Plotly.extendTraces(plots[i], {y:[[x], [y], [z], [s]]}, [0, 1, 2, 3], 300);
     }
 
     // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
-    Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3)]}, {}, [0, 1, 2]);
+    Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3), orientations[3].toFixed(3)]}, {}, [0, 1, 2, 3]);
 
     angle_xz = Math.atan2(z, x);
 
@@ -679,7 +694,29 @@ let data = [
       ],
       bar: { color: "black" }
     }
-  }
+  },
+  {
+    type: "indicator",
+    mode: "number+gauge+delta",
+    value: 220,
+    delta: { reference: 200 },
+    domain: { x: [0.25, 1], y: [0.7, 0.9] },
+    title: { text: "Sensor 4" },
+    gauge: {
+      shape: "bullet",
+      axis: { range: [null, 300] },
+      threshold: {
+        line: { color: "black", width: 2 },
+        thickness: 0.75,
+        value: 210
+      },
+      steps: [
+        { range: [0, 150], color: "gray" },
+        { range: [150, 250], color: "lightgray" }
+      ],
+      bar: { color: "black" }
+    }
+  }  
 ];
 
 var layout = {
