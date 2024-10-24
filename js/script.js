@@ -640,15 +640,15 @@ let data = [
       shape: "bullet",
       axis: { range: [-300, 300] },
       threshold: {
-        line: { color: "black", width: 2 },
+        line: { color: "black", width: 1 },
         thickness: 0.75,
-        value: 170
+        value: 0
       },
       steps: [
-        { range: [0, 150], color: "gray" },
-        { range: [150, 250], color: "lightgray"}
+        { range: [-300, 0], color: "gray" },
+        { range: [0, 300], color: "lightgray"}
       ],
-      bar: { color: "black" }
+      bar: { color: "red" }
     }
   },
   {
