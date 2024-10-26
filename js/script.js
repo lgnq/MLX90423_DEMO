@@ -633,7 +633,7 @@ let data = [
   {
     type: "indicator",
     mode: "number+gauge+delta",
-    value: 0,
+    value: -100,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.1, 0.2] },
     title: { text: "Sensor 1" },
