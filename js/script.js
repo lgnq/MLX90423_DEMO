@@ -641,9 +641,9 @@ let data = [
       shape: "bullet",
       axis: { range: [-300, 300] },
       threshold: {
-        line: { color: "red", width: 5 },
+        line: { color: "red", width: 3 },
         thickness: 0.75,
-        value: 0
+        value: 50
       },
       steps: [
         { range: [-300, 0], color: "gray" },
