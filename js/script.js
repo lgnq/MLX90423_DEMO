@@ -259,7 +259,7 @@ async function readLoop() {
 
     // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
     // Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3), orientations[3].toFixed(3)]}, {}, [0, 1, 2, 3]);
-    Plotly.update('linear_chart', {gauge: {steps: {range: [x, x+50]}}}, [1]);
+    // Plotly.update('linear_chart', {gauge: {steps: {range: [x, x+50]}}}, [1]);
 
     angle_xz = Math.atan2(z, x);
 
@@ -641,7 +641,7 @@ let data = [
       shape: "bullet",
       axis: { range: [-300, 300] },
       threshold: {
-        line: { color: "black", width: 1 },
+        line: { color: "red", width: 10 },
         thickness: 0.75,
         value: 0
       },
