@@ -724,4 +724,4 @@ var layout = {
   width: 1200, height: 300,
   margin: { t: 10, r: 25, l: 25, b: 10 }
 };
-Plotly.newPlot('linear_chart', data, layout);
+Plotly.newPlot('linear_chart', data, layout, config);
