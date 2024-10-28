@@ -721,6 +721,7 @@ let data = [
 ];
 
 var layout = {
+  title: "linear distance movement detected by MLX90423",
   width: 1200, height: 300,
   margin: { t: 10, r: 25, l: 25, b: 10 }
 };
