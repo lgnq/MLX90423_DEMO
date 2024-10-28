@@ -86,7 +86,7 @@ let trace_x = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'X',
+  name: 'Sensor 1',
   // fill: 'tozeroy',
   line: {
     // color: 'rgb(219, 64, 82)',
@@ -100,7 +100,7 @@ let trace_y = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'Y',
+  name: 'Sensor 2',
   line: {
     // color: 'rgb(55, 128, 191)',
     width: 1
@@ -113,7 +113,7 @@ let trace_z = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'Z',
+  name: 'Sensor 3',
   line: {
     // color: 'rgb(55, 128, 191)',
     width: 1
@@ -649,7 +649,7 @@ let data = [
         { range: [-300, 0], color: "gray" },
         { range: [0, 300], color: "lightgray"}
       ],
-      bar: { color: "blue" }
+      // bar: { color: "blue" }
     }
   },
   {
@@ -671,7 +671,7 @@ let data = [
         { range: [-300, 0], color: "gray" },
         { range: [0, 300], color: "lightgray" }
       ],
-      bar: { color: "black" }
+      // bar: { color: "black" }
     }
   },
   {
@@ -715,7 +715,7 @@ let data = [
         { range: [-300, 0], color: "gray" },
         { range: [0, 300], color: "lightgray" }
       ],
-      bar: { color: "black", "thickness": 0.5 }
+      bar: {"thickness": 0.5 }
     }
   }  
 ];
