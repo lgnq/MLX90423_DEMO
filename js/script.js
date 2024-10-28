@@ -30,13 +30,6 @@ let y = 0;
 let z = 0;
 let s = 0;
 
-let angle_xy = 0;
-let angle_xz = 0;
-let angle_yz = 0;
-
-let alpha = 0;
-let beta  = 0;
-
 let prefix;
 let separator;
 
@@ -545,7 +538,7 @@ function loadAllSettings() {
   autoscroll.checked    = loadSetting('autoscroll', true);
   showTimestamp.checked = loadSetting('timestamp', false);
   kalmanFilter.checked  = loadSetting('kalmanfilter', false);
-  baudRate.value        = loadSetting('baudrate', 9600);
+  baudRate.value        = loadSetting('baudrate', 115200);
   angleType.value       = loadSetting('angletype', 'quaternion');
   darkMode.checked      = loadSetting('darkmode', false);
 }
@@ -632,7 +625,7 @@ var w = parent.innerWidth;
 let data = [
   {
     type: "indicator",
-    mode: "number+gauge+delta",
+    mode: "number+gauge",
     value: 0,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.1, 0.2] },
@@ -649,12 +642,12 @@ let data = [
         { range: [-300, 0], color: "gray" },
         { range: [0, 300], color: "lightgray"}
       ],
-      // bar: { color: "blue" }
+      bar: { color: "blue", thickness: 0.8 }
     }
   },
   {
     type: "indicator",
-    mode: "number+gauge+delta",
+    mode: "number+gauge",
     value: 0,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.3, 0.4] },
@@ -671,12 +664,12 @@ let data = [
         { range: [-300, 0], color: "gray" },
         { range: [0, 300], color: "lightgray" }
       ],
-      // bar: { color: "black" }
+      bar: { color: "blue", thickness: 0.8 }
     }
   },
   {
     type: "indicator",
-    mode: "number+gauge+delta",
+    mode: "number+gauge",
     value: 0,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.5, 0.6] },
@@ -693,12 +686,12 @@ let data = [
         { range: [-300, 0], color: "gray" },
         { range: [0, 300], color: "lightgray" }
       ],
-      // bar: { color: "black" }
+      bar: { color: "blue", thickness: 0.8 }
     }
   },
   {
     type: "indicator",
-    mode: "number+gauge+delta",
+    mode: "number+gauge",
     value: 0,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.7, 0.8] },
@@ -715,7 +708,7 @@ let data = [
         { range: [-300, 0], color: "gray" },
         { range: [0, 300], color: "lightgray" }
       ],
-      bar: {"thickness": 0.5 }
+      bar: { color: "blue", thickness: 0.8 }
     }
   }  
 ];
