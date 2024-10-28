@@ -721,8 +721,8 @@ let data = [
 ];
 
 var layout = {
-  title: "linear distance movement detected by MLX90423",
-  width: 1200, height: 300,
+  title: "linear travel detected by MLX90423(mm)",
+  width: w, height: 400,
   margin: { t: 10, r: 25, l: 25, b: 10 }
 };
 Plotly.newPlot('linear_chart', data, layout, config);
