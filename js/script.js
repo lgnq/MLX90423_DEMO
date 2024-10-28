@@ -137,8 +137,8 @@ let data_xyz = [trace_x, trace_y, trace_z, trace_s];
 
 document.addEventListener('DOMContentLoaded', async () => {
   butConnect.addEventListener('click', clickConnect);
-  butAddplot.addEventListener('click', clickAddplot);
-  butAddtrace.addEventListener('click', clickAddtrace);
+  // butAddplot.addEventListener('click', clickAddplot);
+  // butAddtrace.addEventListener('click', clickAddtrace);
   butClear.addEventListener('click', clickClear);
   autoscroll.addEventListener('click', clickAutoscroll);
   showTimestamp.addEventListener('click', clickTimestamp);
@@ -375,35 +375,35 @@ async function clickConnect() {
   toggleUIConnected(true);
 }
 
-async function clickAddplot() {
-  const ele     = document.getElementById('chart1');
-  const plot_id = document.getElementById('plotid').value;
-  const newDiv  = document.createElement('div');
+// async function clickAddplot() {
+//   const ele     = document.getElementById('chart1');
+//   const plot_id = document.getElementById('plotid').value;
+//   const newDiv  = document.createElement('div');
   
-  const trace_data = document.getElementById('tracedataid').value;
+//   const trace_data = document.getElementById('tracedataid').value;
 
-  newDiv.setAttribute("id", plot_id);
+//   newDiv.setAttribute("id", plot_id);
 
-  // Generate the Plotly chart
-  // Plotly.newPlot(newDiv, [{
-  //   y: data_xyz[parseInt(trace_data, 10)],
-  //   // type: 'scatter'
-  // }], layout_xyz, config);
+//   // Generate the Plotly chart
+//   // Plotly.newPlot(newDiv, [{
+//   //   y: data_xyz[parseInt(trace_data, 10)],
+//   //   // type: 'scatter'
+//   // }], layout_xyz, config);
 
-  Plotly.newPlot(newDiv, data_xyz, layout_xyz, config);
+//   Plotly.newPlot(newDiv, data_xyz, layout_xyz, config);
 
-  plots.push(plot_id);
+//   plots.push(plot_id);
 
-  ele.appendChild(newDiv);
-}
+//   ele.appendChild(newDiv);
+// }
 
-async function clickAddtrace() {
-  const plot_id  = document.getElementById('plotid').value;
-  const plot_div = document.getElementById(plot_id);
+// async function clickAddtrace() {
+//   const plot_id  = document.getElementById('plotid').value;
+//   const plot_div = document.getElementById(plot_id);
 
-  // add a single trace to an existing graphDiv
-  Plotly.addTraces(plot_div, {y: [1, 2, 3]});
-}
+//   // add a single trace to an existing graphDiv
+//   Plotly.addTraces(plot_div, {y: [1, 2, 3]});
+// }
 
 /**
  * @name clickAutoscroll
