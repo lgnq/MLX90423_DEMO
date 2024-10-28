@@ -639,8 +639,8 @@ let data = [
       //   value: 50
       // },
       steps: [
-        { range: [-300, 0], color: "gray" },
-        { range: [0, 300], color: "lightgray"}
+        // { range: [-300, 0], color: "gray" },
+        { range: [-300, 300], color: "lightgray"}
       ],
       bar: { color: "blue", thickness: 0.8 }
     }
@@ -661,8 +661,8 @@ let data = [
       //   value: 50
       // },
       steps: [
-        { range: [-300, 0], color: "gray" },
-        { range: [0, 300], color: "lightgray" }
+        // { range: [-300, 0], color: "gray" },
+        { range: [-300, 300], color: "lightgray" }
       ],
       bar: { color: "blue", thickness: 0.8 }
     }
@@ -683,8 +683,8 @@ let data = [
       //   value: 210
       // },
       steps: [
-        { range: [-300, 0], color: "gray" },
-        { range: [0, 300], color: "lightgray" }
+        // { range: [-300, 0], color: "gray" },
+        { range: [-300, 300], color: "lightgray" }
       ],
       bar: { color: "blue", thickness: 0.8 }
     }
@@ -705,8 +705,8 @@ let data = [
       //   value: 210
       // },
       steps: [
-        { range: [-300, 0], color: "gray" },
-        { range: [0, 300], color: "lightgray" }
+        // { range: [-300, 0], color: "gray" },
+        { range: [-300, 300], color: "lightgray" }
       ],
       bar: { color: "blue", thickness: 0.8 }
     }
@@ -716,6 +716,6 @@ let data = [
 var layout = {
   title: "linear travel detected by MLX90423(mm)",
   width: w-200, height: 400,
-  margin: { t: 10, r: 25, l: 25, b: 10 }
+  // margin: { t: 10, r: 25, l: 25, b: 10 }
 };
 Plotly.newPlot('linear_chart', data, layout, config);
