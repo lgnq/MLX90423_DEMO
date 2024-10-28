@@ -668,8 +668,8 @@ let data = [
       //   value: 50
       // },
       steps: [
-        { range: [0, 300], color: "gray" },
-        { range: [-300, 0], color: "lightgray" }
+        { range: [-300, 0], color: "gray" },
+        { range: [0, 300], color: "lightgray" }
       ],
       bar: { color: "black" }
     }
@@ -683,15 +683,15 @@ let data = [
     title: { text: "Sensor 3" },
     gauge: {
       shape: "bullet",
-      axis: { range: [null, 300] },
+      axis: { range: [-300, 300] },
       // threshold: {
       //   line: { color: "black", width: 2 },
       //   thickness: 0.75,
       //   value: 210
       // },
       steps: [
-        { range: [0, 300], color: "gray" },
-        { range: [-300, 0], color: "lightgray" }
+        { range: [-300, 0], color: "gray" },
+        { range: [0, 300], color: "lightgray" }
       ],
       // bar: { color: "black" }
     }
@@ -705,15 +705,15 @@ let data = [
     title: { text: "Sensor 4" },
     gauge: {
       shape: "bullet",
-      axis: { range: [null, 300] },
+      axis: { range: [-300, 300] },
       // threshold: {
       //   line: { color: "black", width: 2 },
       //   thickness: 0.75,
       //   value: 210
       // },
       steps: [
-        { range: [0, 300], color: "gray" },
-        { range: [-300, 0], color: "lightgray" }
+        { range: [-300, 0], color: "gray" },
+        { range: [0, 300], color: "lightgray" }
       ],
       bar: { color: "black", "thickness": 0.5 }
     }
