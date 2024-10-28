@@ -668,8 +668,8 @@ let data = [
       //   value: 50
       // },
       steps: [
-        { range: [0, 25], color: "gray" },
-        { range: [25, 75], color: "lightgray" }
+        { range: [0, 300], color: "gray" },
+        { range: [-300, 0], color: "lightgray" }
       ],
       bar: { color: "black" }
     }
@@ -690,8 +690,8 @@ let data = [
       //   value: 210
       // },
       steps: [
-        { range: [0, 150], color: "gray" },
-        { range: [150, 200], color: "lightgray" }
+        { range: [0, 300], color: "gray" },
+        { range: [-300, 0], color: "lightgray" }
       ],
       // bar: { color: "black" }
     }
@@ -712,8 +712,8 @@ let data = [
       //   value: 210
       // },
       steps: [
-        { range: [0, 150], color: "gray" },
-        { range: [150, 250], color: "lightgray" }
+        { range: [0, 300], color: "gray" },
+        { range: [-300, 0], color: "lightgray" }
       ],
       bar: { color: "black", "thickness": 0.5 }
     }
