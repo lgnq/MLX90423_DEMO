@@ -75,7 +75,7 @@ let layout_xyz = {
 
 let trace_x = {
   // type: 'line',
-  type: 'scattergl',
+  // type: 'scattergl',
   // x: [0],
   y: [0],
   mode: 'lines',
@@ -89,7 +89,7 @@ let trace_x = {
 
 let trace_y = {
   // type: 'line',
-  type: 'scattergl',
+  // type: 'scattergl',
   // x: [0],
   y: [0],
   mode: 'lines',
@@ -240,23 +240,6 @@ async function readLoop() {
     // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
     Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3), orientations[3].toFixed(3)]}, {}, [0, 1, 2, 3]);
     // Plotly.update('linear_chart', {gauge: {steps: {range: [x, x+50]}}}, [0]);
-
-    // angle_xz = Math.atan2(z, x);
-
-    // if (angle_xz < 0)
-    //   angle_xz += 2*Math.PI;
-  
-    // angle_xz = (angle_xz / Math.PI) * 180;  
-    
-    // angle_yz = Math.atan2(z, y);
-
-    // if (angle_yz < 0)
-    //   angle_yz += 2*Math.PI;
-  
-    // angle_yz = (angle_yz / Math.PI) * 180;   
-    
-    // alpha = angle_xz.toFixed(3);
-    // beta  = angle_yz.toFixed(3);
 
     if (done) {
       console.log('[readLoop] DONE', done);
