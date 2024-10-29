@@ -89,7 +89,7 @@ let trace_x = {
 
 let trace_y = {
   // type: 'line',
-  // type: 'scattergl',
+  type: 'scattergl',
   // x: [0],
   y: [0],
   mode: 'lines',
