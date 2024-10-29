@@ -221,63 +221,69 @@ async function readLoop() {
   while (true) {
     const {value, done} = await reader.read();
 
-    console.log(value);
-
-    if (value) {
-      if (value.substr(0, prefix.length) == prefix) {
-        orientations = value.substr(prefix.length).trim().split(separator).map(x=>+x);
-      }
-    
-      // if (value.substr(0, 11) == "Quaternion:") {
-      //   quaternion = value.substr(11).trim().split(",").map(x=>+x);
-      // }
-    
-      // if (value.substr(0, 12) == "Calibration:") {
-      //   calibration = value.substr(12).trim().split(",").map(x=>+x);
-        
-      //   if (!showCalibration) {
-      //     showCalibration = true;
-      //     updateTheme();
-      //   }
-      // }
-    }
-
-    x = orientations[0];
-    y = orientations[1];
-    z = orientations[2];
-    s = orientations[3];
-
-    for (let i = 0; i < plots.length; i++)
-    {
-      Plotly.extendTraces(plots[i], {y:[[x], [y], [z], [s]]}, [0, 1, 2, 3], 300);
-    }
-
-    // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
-    // Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3), orientations[3].toFixed(3)]}, {}, [0, 1, 2, 3]);
-    // Plotly.update('linear_chart', {gauge: {steps: {range: [x, x+50]}}}, [0]);
-
-    angle_xz = Math.atan2(z, x);
-
-    if (angle_xz < 0)
-      angle_xz += 2*Math.PI;
-  
-    angle_xz = (angle_xz / Math.PI) * 180;  
-    
-    angle_yz = Math.atan2(z, y);
-
-    if (angle_yz < 0)
-      angle_yz += 2*Math.PI;
-  
-    angle_yz = (angle_yz / Math.PI) * 180;   
-    
-    alpha = angle_xz.toFixed(3);
-    beta  = angle_yz.toFixed(3);
-
     if (done) {
-      console.log('[readLoop] DONE', done);
+      // Allow the serial port to be closed later.
       reader.releaseLock();
       break;
     }
+    // value is a Uint8Array.
+    console.log(value);
+
+    // if (value) {
+    //   if (value.substr(0, prefix.length) == prefix) {
+    //     orientations = value.substr(prefix.length).trim().split(separator).map(x=>+x);
+    //   }
+    
+    //   // if (value.substr(0, 11) == "Quaternion:") {
+    //   //   quaternion = value.substr(11).trim().split(",").map(x=>+x);
+    //   // }
+    
+    //   // if (value.substr(0, 12) == "Calibration:") {
+    //   //   calibration = value.substr(12).trim().split(",").map(x=>+x);
+        
+    //   //   if (!showCalibration) {
+    //   //     showCalibration = true;
+    //   //     updateTheme();
+    //   //   }
+    //   // }
+    // }
+
+    // x = orientations[0];
+    // y = orientations[1];
+    // z = orientations[2];
+    // s = orientations[3];
+
+    // for (let i = 0; i < plots.length; i++)
+    // {
+    //   Plotly.extendTraces(plots[i], {y:[[x], [y], [z], [s]]}, [0, 1, 2, 3], 300);
+    // }
+
+    // // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
+    // // Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3), orientations[3].toFixed(3)]}, {}, [0, 1, 2, 3]);
+    // // Plotly.update('linear_chart', {gauge: {steps: {range: [x, x+50]}}}, [0]);
+
+    // angle_xz = Math.atan2(z, x);
+
+    // if (angle_xz < 0)
+    //   angle_xz += 2*Math.PI;
+  
+    // angle_xz = (angle_xz / Math.PI) * 180;  
+    
+    // angle_yz = Math.atan2(z, y);
+
+    // if (angle_yz < 0)
+    //   angle_yz += 2*Math.PI;
+  
+    // angle_yz = (angle_yz / Math.PI) * 180;   
+    
+    // alpha = angle_xz.toFixed(3);
+    // beta  = angle_yz.toFixed(3);
+
+    // if (done) {
+    //   console.log('[readLoop] DONE', done);
+    //   reader.releaseLock();
+    //   break;
+    // }
   }
 }
 
