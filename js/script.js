@@ -184,8 +184,8 @@ async function connect() {
   console.log(prefix);
 
   readLoop().catch(async function(error) {
-    toggleUIConnected(false);
-    await disconnect();
+    // toggleUIConnected(false);
+    // await disconnect();
   });
 }
 
