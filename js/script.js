@@ -678,6 +678,7 @@ let data = [
 var layout = {
   title: "linear travel detected by MLX90423(mm)",
   // width: w-200, height: 400,
-  margin: { t: 10, r: 20, l: 20, b: 0 }
+  // margin: { t: 10, r: 20, l: 20, b: 0 }
 };
+
 Plotly.newPlot('linear_chart', data, layout, config);
