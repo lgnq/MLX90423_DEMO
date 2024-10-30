@@ -33,6 +33,8 @@ let s = 0;
 let prefix;
 let separator;
 
+let size;
+
 const maxLogLength  = 50;
 const baudRates     = [300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 115200, 230400, 250000, 500000, 1000000, 2000000];
 
@@ -52,6 +54,7 @@ const darkMode      = document.getElementById('darkmode');
 const calContainer  = document.getElementById('calibration');
 const logContainer  = document.getElementById("log-container");
 const myInput       = document.getElementById('myInput');
+const sampleSize    = document.getElementById('sampleSize');
 
 let config = {responsive: true}
 
@@ -140,6 +143,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   angleType.addEventListener('change', changeAngleType);
   darkMode.addEventListener('click', clickDarkMode);
   myInput.addEventListener('keydown', writeCmd);
+
+  size = parseInt(sampleSize.value);
+  console.log(size);
 
   if ('serial' in navigator) {
     const notSupported = document.getElementById('notSupported');
@@ -234,16 +240,16 @@ async function readLoop() {
 
     for (let i = 0; i < plots.length; i++)
     {
-      Plotly.extendTraces(plots[i], {y:[[x], [y], [z], [s]]}, [0, 1, 2, 3], 300);
+      Plotly.extendTraces(plots[i], {y:[[x], [y], [z], [s]]}, [0, 1, 2, 3], size);
     }
 
-    if (trace_x.y.length > 300)
+    if (trace_x.y.length > size)
       trace_x.y.pop();
-    if (trace_y.y.length > 300)
+    if (trace_y.y.length > size)
       trace_y.y.pop();
-    if (trace_z.y.length > 300)
+    if (trace_z.y.length > size)
       trace_z.y.pop();
-    if (trace_s.y.length > 300)
+    if (trace_s.y.length > size)
       trace_s.y.pop();
 
     // console.log(trace_x.y);
