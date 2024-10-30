@@ -237,6 +237,15 @@ async function readLoop() {
       Plotly.extendTraces(plots[i], {y:[[x], [y], [z], [s]]}, [0, 1, 2, 3], 300);
     }
 
+    if (trace_x.length > 10)
+      trace_x.pop();
+    if (trace_y.length > 300)
+      trace_y.pop();
+    if (trace_z.length > 300)
+      trace_z.pop();
+    if (trace_s.length > 300)
+      trace_s.pop();
+
     console.log(trace_x.y);
 
     // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
