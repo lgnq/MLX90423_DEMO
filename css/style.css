@@ -126,7 +126,7 @@ button {
 
 #plot1 {
   position: relative;
-  height:40vh;
+  height:35vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
@@ -134,7 +134,7 @@ button {
 
 #linear_chart {
   position: relative;
-  height:40vh;
+  height:35vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
