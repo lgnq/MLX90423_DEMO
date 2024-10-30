@@ -132,7 +132,7 @@ button {
   gap: 10px;
 }
 
-#joystick {
+#linear_chart {
   position: relative;
   height:25vh;
   width: 100%;
