@@ -143,9 +143,9 @@ document.addEventListener('DOMContentLoaded', async () => {
   angleType.addEventListener('change', changeAngleType);
   darkMode.addEventListener('click', clickDarkMode);
   myInput.addEventListener('keydown', writeCmd);
+  sampleSize.addEventListener('keydown', setSampleSize);
 
   size = parseInt(sampleSize.value);
-  console.log(size);
 
   if ('serial' in navigator) {
     const notSupported = document.getElementById('notSupported');
@@ -464,6 +464,21 @@ function writeCmd(event) {
     
     writer.write(myInput.value + '\r');
     myInput.value = ''
+  }
+
+  // Ignores sending carriage return if sending Ctrl+C
+  // if (cmd !== "\x03") {
+    // writer.write("\r"); // Important to send a carriage return after a command
+  // }
+  
+  writer.releaseLock();
+}
+
+function setSampleSize(event) {
+  if (event.keyCode === 13) {
+    console.log(sampleSize.value);
+    
+    size = parseInt(sampleSize.value);
   }
 
   // Ignores sending carriage return if sending Ctrl+C
