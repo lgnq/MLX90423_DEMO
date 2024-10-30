@@ -139,3 +139,9 @@ button {
   margin: 10px auto;
   gap: 10px;
 }
+
+.header-right {
+  float: right;
+  display: flex;
+  align-items: center;
+}
