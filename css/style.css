@@ -113,7 +113,7 @@ button {
 
 .log {
   /* height: calc(50vh - 120px); */
-  height: 15vh;
+  height: 10vh;
   width: 100vw;
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
   font-size: 0.8em;
@@ -134,7 +134,7 @@ button {
 
 #linear_chart {
   position: relative;
-  height:30vh;
+  height:25vh;
   width: 100%;
   margin: 10px auto;
   gap: 10px;
