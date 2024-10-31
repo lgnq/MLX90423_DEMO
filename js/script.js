@@ -509,7 +509,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray"}
+        { range: [-300, 300], color: "#b2c4cb"}
       ],
       bar: { color: "#00354B", thickness: 0.8 }
     }
@@ -531,7 +531,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray" }
+        { range: [-300, 300], color: "#b2c4cb" }
       ],
       bar: { color: "#65BBA9", thickness: 0.8 }
     }
@@ -553,7 +553,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray" }
+        { range: [-300, 300], color: "#b2c4cb" }
       ],
       bar: { color: "#DB4140", thickness: 0.8 }
     }
@@ -575,7 +575,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray" }
+        { range: [-300, 300], color: "#b2c4cb" }
       ],
       bar: { color: "#EEA320", thickness: 0.8 }
     }
