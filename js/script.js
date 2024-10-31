@@ -187,7 +187,7 @@ async function connect() {
   prefix    = document.getElementById('messageprefixid').value
   separator = document.getElementById('messageseparatorid').value
 
-  console.log(prefix);
+  // console.log(prefix);
 
   readLoop().catch(async function(error) {
     toggleUIConnected(false);
@@ -251,8 +251,6 @@ async function readLoop() {
       trace_z.y.pop();
     if (trace_s.y.length > size)
       trace_s.y.pop();
-
-    // console.log(trace_x.y);
 
     // Plotly.update('linear_chart', {value: orientations[0].toFixed(3)}, {}, [0]);
     Plotly.update('linear_chart', {value: [orientations[0].toFixed(3), orientations[1].toFixed(3), orientations[2].toFixed(3), orientations[3].toFixed(3)]}, {}, [0, 1, 2, 3]);
