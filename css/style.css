@@ -114,7 +114,8 @@ button {
 .log {
   /* height: calc(50vh - 120px); */
   height: 10vh;
-  width: 100vw;
+  /* width: 100vw; */
+  width: 100%;
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
   font-size: 0.8em;
   border-width: 1px;
