@@ -78,7 +78,7 @@ let trace_x = {
   name: 'Sensor 1',
   // fill: 'tozeroy',
   line: {
-    // color: 'rgb(219, 64, 82)',
+    color: 'rgb(0, 53, 75)',
     width: 1
   }
 };
@@ -91,7 +91,7 @@ let trace_y = {
   mode: 'lines',
   name: 'Sensor 2',
   line: {
-    // color: 'rgb(55, 128, 191)',
+    color: 'rgb(101, 187, 169)',
     width: 1
   }
 };
@@ -104,7 +104,7 @@ let trace_z = {
   mode: 'lines',
   name: 'Sensor 3',
   line: {
-    // color: 'rgb(55, 128, 191)',
+    color: 'rgb(219, 65, 64)',
     width: 1
   }
 };
@@ -117,7 +117,7 @@ let trace_s = {
   mode: 'lines',
   name: 'Sensor 4',
   line: {
-    // color: 'rgb(55, 128, 191)',
+    color: 'rgb(238, 163, 32)',
     width: 1
   }
 };
