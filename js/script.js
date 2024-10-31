@@ -17,11 +17,8 @@ let inputDone;
 let outputDone;
 let inputStream;
 let outputStream;
-let showCalibration = false;
 
 let orientations = [0, 0, 0];
-let quaternion  = [1, 0, 0, 0];
-let calibration = [0, 0, 0, 0];
 
 let plots = [];
 
@@ -40,8 +37,6 @@ const baudRates     = [300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 
 
 const log           = document.getElementById('log');
 const butConnect    = document.getElementById('butConnect');
-const butAddplot    = document.getElementById('butAddplot');
-const butAddtrace   = document.getElementById('butAddtrace');
 const butClear      = document.getElementById('butClear');
 const baudRate      = document.getElementById('baudRate');
 const autoscroll    = document.getElementById('autoscroll');
@@ -50,7 +45,6 @@ const kalmanFilter  = document.getElementById('kalmanfilter');
 const lightSS       = document.getElementById('light');
 const darkSS        = document.getElementById('dark');
 const darkMode      = document.getElementById('darkmode');
-const calContainer  = document.getElementById('calibration');
 const logContainer  = document.getElementById("log-container");
 const myInput       = document.getElementById('myInput');
 const sampleSize    = document.getElementById('sampleSize');
@@ -132,8 +126,6 @@ let data_xyz = [trace_x, trace_y, trace_z, trace_s];
 
 document.addEventListener('DOMContentLoaded', async () => {
   butConnect.addEventListener('click', clickConnect);
-  // butAddplot.addEventListener('click', clickAddplot);
-  // butAddtrace.addEventListener('click', clickAddtrace);
   butClear.addEventListener('click', clickClear);
   autoscroll.addEventListener('click', clickAutoscroll);
   showTimestamp.addEventListener('click', clickTimestamp);
@@ -156,8 +148,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   initBaudRate();
   loadAllSettings();
   updateTheme();
-  // await finishDrawing();
-  // await render();
 });
 
 /**
@@ -184,8 +174,6 @@ async function connect() {
 
   prefix    = document.getElementById('messageprefixid').value
   separator = document.getElementById('messageseparatorid').value
-
-  // console.log(prefix);
 
   readLoop().catch(async function(error) {
     toggleUIConnected(false);
@@ -214,7 +202,6 @@ async function disconnect() {
 
   await port.close();
   port = null;
-  showCalibration = false;
 }
 
 /**
@@ -311,13 +298,6 @@ function updateTheme() {
   else {
     enableStyleSheet(lightSS, true);
   }
-
-  // if (showCalibration && !logContainer.classList.contains('show-calibration')) {
-  //   logContainer.classList.add('show-calibration')
-  // } 
-  // else if (!showCalibration && logContainer.classList.contains('show-calibration')) {
-  //   logContainer.classList.remove('show-calibration')
-  // }
 }
 
 function enableStyleSheet(node, enabled) {
@@ -350,36 +330,6 @@ async function clickConnect() {
 
   toggleUIConnected(true);
 }
-
-// async function clickAddplot() {
-//   const ele     = document.getElementById('chart1');
-//   const plot_id = document.getElementById('plotid').value;
-//   const newDiv  = document.createElement('div');
-  
-//   const trace_data = document.getElementById('tracedataid').value;
-
-//   newDiv.setAttribute("id", plot_id);
-
-//   // Generate the Plotly chart
-//   // Plotly.newPlot(newDiv, [{
-//   //   y: data_xyz[parseInt(trace_data, 10)],
-//   //   // type: 'scatter'
-//   // }], layout_xyz, config);
-
-//   Plotly.newPlot(newDiv, data_xyz, layout_xyz, config);
-
-//   plots.push(plot_id);
-
-//   ele.appendChild(newDiv);
-// }
-
-// async function clickAddtrace() {
-//   const plot_id  = document.getElementById('plotid').value;
-//   const plot_div = document.getElementById(plot_id);
-
-//   // add a single trace to an existing graphDiv
-//   Plotly.addTraces(plot_div, {y: [1, 2, 3]});
-// }
 
 /**
  * @name clickAutoscroll
@@ -533,29 +483,6 @@ function loadSetting(setting, defaultValue) {
   }
 
   return value;
-}
-
-function updateCalibration() {
-  // Update the Calibration Container with the values from calibration
-  const calMap = [
-    {caption: "Uncalibrated",         color: "#CC0000"},
-    {caption: "Partially Calibrated", color: "#FF6600"},
-    {caption: "Mostly Calibrated",    color: "#FFCC00"},
-    {caption: "Fully Calibrated",     color: "#009900"},
-  ];
-  
-  const calLabels = [
-    "System", "Gyro", "Accelerometer", "Magnetometer"
-  ]
-
-  calContainer.innerHTML = "";
-  for (var i = 0; i < calibration.length; i++) {
-    let calInfo = calMap[calibration[i]];
-    let element = document.createElement("div");
-    element.innerHTML = calLabels[i] + ": " + calInfo.caption;
-    element.style = "color: " + calInfo.color;
-    calContainer.appendChild(element);
-  }
 }
 
 function saveSetting(setting, value) {
