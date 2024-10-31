@@ -511,7 +511,7 @@ let data = [
         // { range: [-300, 0], color: "gray" },
         { range: [-300, 300], color: "lightgray"}
       ],
-      bar: { color: "blue", thickness: 0.8 }
+      bar: { color: "#00354B", thickness: 0.8 }
     }
   },
   {
@@ -533,7 +533,7 @@ let data = [
         // { range: [-300, 0], color: "gray" },
         { range: [-300, 300], color: "lightgray" }
       ],
-      bar: { color: "blue", thickness: 0.8 }
+      bar: { color: "#65BBA9", thickness: 0.8 }
     }
   },
   {
@@ -555,7 +555,7 @@ let data = [
         // { range: [-300, 0], color: "gray" },
         { range: [-300, 300], color: "lightgray" }
       ],
-      bar: { color: "blue", thickness: 0.8 }
+      bar: { color: "#DB4140", thickness: 0.8 }
     }
   },
   {
@@ -577,7 +577,7 @@ let data = [
         // { range: [-300, 0], color: "gray" },
         { range: [-300, 300], color: "lightgray" }
       ],
-      bar: { color: "blue", thickness: 0.8 }
+      bar: { color: "#EEA320", thickness: 0.8 }
     }
   }  
 ];
