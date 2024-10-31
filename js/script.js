@@ -47,7 +47,6 @@ const baudRate      = document.getElementById('baudRate');
 const autoscroll    = document.getElementById('autoscroll');
 const showTimestamp = document.getElementById('showTimestamp');
 const kalmanFilter  = document.getElementById('kalmanfilter');
-const angleType     = document.getElementById('angle_type');
 const lightSS       = document.getElementById('light');
 const darkSS        = document.getElementById('dark');
 const darkMode      = document.getElementById('darkmode');
@@ -140,7 +139,6 @@ document.addEventListener('DOMContentLoaded', async () => {
   showTimestamp.addEventListener('click', clickTimestamp);
   kalmanFilter.addEventListener('click', clickKalmanfilter);
   baudRate.addEventListener('change', changeBaudRate);
-  angleType.addEventListener('change', changeAngleType);
   darkMode.addEventListener('click', clickDarkMode);
   myInput.addEventListener('keydown', writeCmd);
   sampleSize.addEventListener('keydown', setSampleSize);
@@ -416,14 +414,6 @@ async function changeBaudRate() {
 }
 
 /**
- * @name changeAngleType
- * Change handler for the Baud Rate selector.
- */
-async function changeAngleType() {
-  saveSetting('angletype', angleType.value);
-}
-
-/**
  * @name clickDarkMode
  * Change handler for the Dark Mode checkbox.
  */
@@ -532,7 +522,6 @@ function loadAllSettings() {
   showTimestamp.checked = loadSetting('timestamp', false);
   kalmanFilter.checked  = loadSetting('kalmanfilter', false);
   baudRate.value        = loadSetting('baudrate', 9600);
-  angleType.value       = loadSetting('angletype', 'quaternion');
   darkMode.checked      = loadSetting('darkmode', false);
 }
 
