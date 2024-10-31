@@ -480,13 +480,6 @@ function setSampleSize(event) {
     
     size = parseInt(sampleSize.value);
   }
-
-  // Ignores sending carriage return if sending Ctrl+C
-  // if (cmd !== "\x03") {
-    // writer.write("\r"); // Important to send a carriage return after a command
-  // }
-  
-  writer.releaseLock();
 }
 
 /**
