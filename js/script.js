@@ -607,15 +607,24 @@ let data = [
 ];
 
 var layout = {
-  title: 
-  {
-    'text': "linear travel detected by MLX90423(mm)",
-    'x': 0.5,
-    'y': 0.95,
-    'xanchor': 'center',
-    'yanchor': 'top',
-    'textangle': -90    
+  title: {
+    text: 'linear travel detected by MLX90423(mm)',
+    font: {
+        family: 'Arial',
+        size: 30
+    },
+    yref: 'paper',
+    automargin: true,
   },
+  // title: 
+  // {
+  //   'text': "linear travel detected by MLX90423(mm)",
+  //   'x': 0.5,
+  //   'y': 0.95,
+  //   'xanchor': 'center',
+  //   'yanchor': 'top',
+  //   'textangle': -90    
+  // },
   // width: w-200, height: 400,
   // margin: { t: 10, r: 20, l: 20, b: 0 }
 };
