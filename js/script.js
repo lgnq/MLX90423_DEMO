@@ -610,7 +610,8 @@ var layout = {
   title: {
     text: 'linear travel detected by MLX90423(mm)',
     font: {
-        family: 'Arial, monospace',
+        // family: 'Arial, monospace',
+        family: 'Arial, sans-serif', // Set the font family to Arial
         size: 30
     },
     yref: 'paper',
