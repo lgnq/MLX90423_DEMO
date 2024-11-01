@@ -428,10 +428,10 @@ function setSampleFreq(event) {
     // Write to output stream
     const writer = outputStream.getWriter();
 
-    if (event.keyCode === 13) {
-      console.log(sampleFreq.value);
-    
+    if (event.keyCode === 13) {    
       freq = parseInt(sampleFreq.value);
+
+      console.log(1000/freq);
 
       writer.write("interval " + (1000/freq) + '\r');
     }
