@@ -495,7 +495,7 @@ let data = [
   {
     type: "indicator",
     mode: "number+gauge",
-    value: 0,
+    value: 0.00,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0, 0.1] },
     title: { text: "Sensor 1" },
@@ -517,7 +517,7 @@ let data = [
   {
     type: "indicator",
     mode: "number+gauge",
-    value: 0,
+    value: 0.00,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.3, 0.4] },
     title: { text: "Sensor 2" },
@@ -539,7 +539,7 @@ let data = [
   {
     type: "indicator",
     mode: "number+gauge",
-    value: 0,
+    value: 0.00,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.6, 0.7] },
     title: { text: "Sensor 3" },
@@ -561,7 +561,7 @@ let data = [
   {
     type: "indicator",
     mode: "number+gauge",
-    value: 0,
+    value: 0.00,
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.9, 1] },
     title: { text: "Sensor 4" },
