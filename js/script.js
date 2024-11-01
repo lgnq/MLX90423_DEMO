@@ -433,7 +433,8 @@ function setSampleFreq(event) {
 
       console.log(1000/freq);
 
-      writer.write("interval " + (1000/freq) + '\r');
+      // writer.write("interval " + (1000/freq) + '\r');
+      writer.write("interval " + size + '\r');
     }
 
     writer.releaseLock();    
