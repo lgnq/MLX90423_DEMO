@@ -432,7 +432,7 @@ function setSampleFreq(event) {
     
       size = parseInt(sampleSize.value);
 
-      writer.write("interval" + size + '\r');
+      writer.write("interval " + size + '\r');
     }
 
     writer.releaseLock();    
