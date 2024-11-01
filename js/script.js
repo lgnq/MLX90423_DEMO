@@ -520,7 +520,7 @@ let data = [
     type: "indicator",
     mode: "number+gauge",
     value: 0.00,
-    number: {'prefix': "", 'valueformat': "f"},
+    number: {'prefix': "D", 'valueformat': "f"},
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.3, 0.4] },
     title: { text: "Sensor 2" },
