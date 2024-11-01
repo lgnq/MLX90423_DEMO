@@ -63,7 +63,7 @@ let layout_xyz = {
     font: {
         // family: 'Arial, monospace',
         family: 'Arial, sans-serif', // Set the font family to Arial
-        size: 20
+        size: 15
     },
     yref: 'paper',
     automargin: true,
@@ -622,7 +622,7 @@ var layout = {
     font: {
         // family: 'Arial, monospace',
         family: 'Arial, sans-serif', // Set the font family to Arial
-        size: 20
+        size: 15
     },
     yref: 'paper',
     automargin: true,
