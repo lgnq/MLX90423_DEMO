@@ -48,6 +48,7 @@ const darkMode      = document.getElementById('darkmode');
 const logContainer  = document.getElementById("log-container");
 const myInput       = document.getElementById('myInput');
 const sampleSize    = document.getElementById('sampleSize');
+const sampleFreq    = document.getElementById('sampleFreq');
 
 let config = {responsive: true}
 
@@ -134,6 +135,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   darkMode.addEventListener('click', clickDarkMode);
   myInput.addEventListener('keydown', writeCmd);
   sampleSize.addEventListener('keydown', setSampleSize);
+  sampleFreq.addEventListener('keydown', setSampleFreq);
 
   size = parseInt(sampleSize.value);
 
@@ -419,6 +421,21 @@ function setSampleSize(event) {
     
     size = parseInt(sampleSize.value);
   }
+}
+
+function setSampleFreq(event) {
+    // Write to output stream
+    const writer = outputStream.getWriter();
+
+    if (event.keyCode === 13) {
+      console.log(sampleFreq.value);
+    
+      size = parseInt(sampleSize.value);
+
+      writer.write("interval" + size + '\r');
+    }
+
+    writer.releaseLock();    
 }
 
 /**
