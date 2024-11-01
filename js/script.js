@@ -30,7 +30,8 @@ let s = 0;
 let prefix;
 let separator;
 
-let size;
+let size = 300;
+let freq = 10;
 
 const maxLogLength  = 50;
 const baudRates     = [300, 1200, 2400, 4800, 9600, 19200, 38400, 57600, 74880, 115200, 230400, 250000, 500000, 1000000, 2000000];
@@ -430,9 +431,9 @@ function setSampleFreq(event) {
     if (event.keyCode === 13) {
       console.log(sampleFreq.value);
     
-      size = parseInt(sampleSize.value);
+      freq = parseInt(sampleFreq.value);
 
-      writer.write("interval " + size + '\r');
+      writer.write("interval " + (1000/freq) + '\r');
     }
 
     writer.releaseLock();    
