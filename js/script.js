@@ -567,7 +567,7 @@ let data = [
     type: "indicator",
     mode: "number+gauge",
     value: 0.00,
-    number: {prefix: "D", valueformat: ".2f"},
+    number: { prefix: "D", valueformat: ".2f" },
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.9, 1] },
     title: { text: "Sensor 4" },
