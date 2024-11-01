@@ -123,9 +123,9 @@ button {
 
   /* height: calc(50vh - 120px); */
 
-/* .log {
-  height: 10vh;
-  width: 100%;
+.log {
+  /* height: 10vh; */
+  /* width: 100%; */
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
   font-size: 0.8em;
   border-width: 1px;
@@ -135,7 +135,7 @@ button {
   transition : color 0.1s linear;
 }
 
-#plot1 {
+/* #plot1 {
   position: relative;
   height:35vh;
   width: 100%;
