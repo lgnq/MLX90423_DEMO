@@ -57,7 +57,17 @@ let layout_xyz = {
   autosize: true,
   // margin: { t: 5, b: 5, l: 5, r: 5 },
 
-  title: 'MLX90423 Output(PWM)',
+  // title: 'MLX90423 Output(PWM)',
+  title: {
+    text: 'MLX90423 Output(PWM)',
+    font: {
+        // family: 'Arial, monospace',
+        family: 'Arial, sans-serif', // Set the font family to Arial
+        size: 20
+    },
+    yref: 'paper',
+    automargin: true,
+  },
   
   xaxis: {
     title: 'time',
@@ -612,7 +622,7 @@ var layout = {
     font: {
         // family: 'Arial, monospace',
         family: 'Arial, sans-serif', // Set the font family to Arial
-        size: 30
+        size: 20
     },
     yref: 'paper',
     automargin: true,
