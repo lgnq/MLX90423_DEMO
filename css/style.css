@@ -137,18 +137,30 @@ button {
   transition : color 0.1s linear;
 }
 
-/* #plot1 {
-  position: relative;
+#plot1 {
+  /* position: relative;
   height:35vh;
   width: 100%;
   margin: 10px auto;
-  gap: 10px;
+  gap: 10px; */
+
+  border-width: 1px;
+  border-style: solid;
+  overflow-x: hidden;
+  overflow-x: auto;
+  transition : color 0.1s linear;  
 }
 
 #linear_chart {
-  position: relative;
+  /* position: relative;
   height:35vh;
   width: 100%;
   margin: 10px auto;
-  gap: 10px;
-} */
+  gap: 10px; */
+
+  border-width: 1px;
+  border-style: solid;
+  overflow-x: hidden;
+  overflow-x: auto;
+  transition : color 0.1s linear;  
+}
