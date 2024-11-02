@@ -16,7 +16,7 @@
   height: 5vh;
   min-height: 50px;
   justify-content: flex-start;
-  padding: 8px 16px 8px 16px;
+  padding: 10px 16px 10px 16px;
   position: fixed;
   transition: transform 0.233s cubic-bezier(0, 0, 0.21, 1) 0.1s;
   width: 100%;
@@ -118,6 +118,9 @@ button {
   /* padding: 10px 20px 10px 20px; */
  
   gap: 10px;
+  
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .notSupported {
