@@ -80,7 +80,7 @@ button {
   padding-top: 80px;
   padding-left: 1em;
   padding-right: 1em;
-  padding-bottom: 1em;
+  padding-bottom: 10px;
 }
 
 .hidden {
