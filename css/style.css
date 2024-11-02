@@ -36,11 +36,6 @@ body {
   margin: 0;
 }
 
-canvas {
-  border-width: 1px;
-  border-style: solid;
-}
-
 p {
   margin: 0.2em;
 }
@@ -109,7 +104,14 @@ button {
 .charts {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+
+  grid-template-rows: auto;
+  /* grid-template-areas: 
+    "header header header header"
+    "c1 c2"
+    "c3 c4"
+    "footer footer footer footer";   */
   
   height: 100vh - 5vh - 150px;
   overflow-y: auto;
