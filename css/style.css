@@ -90,11 +90,7 @@ button {
   height: 40px;
   line-height: 40px;
 
-  /* border-width: 1px;
-  border-style: solid;
-  overflow-x: hidden;
-  overflow-x: auto;
-  transition : color 0.1s linear;       */
+  background-color: white;
 }
 
 .controls span {
@@ -144,11 +140,7 @@ button {
 }
 
 .gridItem {
-  border-width: 1px;
-  border-style: solid;
-  overflow-x: hidden;
-  overflow-x: auto;
-  transition : color 0.1s linear;    
+  background-color: white;
 
   text-align: center;
 }
