@@ -136,6 +136,8 @@ button {
 
   overflow-y: auto;
 
+  justify-self: stretch;
+
   /* border-width: 1px;
   border-style: solid;
   overflow-x: hidden;
