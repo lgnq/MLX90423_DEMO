@@ -154,8 +154,8 @@ document.addEventListener('DOMContentLoaded', async () => {
     console.log("webserial is not supported!")
   }
 
-  Plotly.newPlot('plot1', data_xyz, layout_xyz, config);
-  plots.push('plot1');
+  Plotly.newPlot('plot', data_xyz, layout_xyz, config);
+  plots.push('plot');
 
   initBaudRate();
   loadAllSettings();
