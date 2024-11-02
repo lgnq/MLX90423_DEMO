@@ -106,7 +106,7 @@ button {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   /* grid-template-rows: auto; */
-  
+
   /* grid-template-areas: 
     "header header header header"
     "c1 c2"
@@ -121,12 +121,6 @@ button {
 
   margin-top: 10px;
   margin-bottom: 10px;
-}
-
-.notSupported {
-  padding: 1em;
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 .row {

@@ -151,8 +151,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   size = parseInt(sampleSize.value);
 
   if ('serial' in navigator) {
-    const notSupported = document.getElementById('notSupported');
-    notSupported.classList.add('hidden');
+    console.log("webserial is not supported!")
   }
 
   Plotly.newPlot('plot1', data_xyz, layout_xyz, config);
