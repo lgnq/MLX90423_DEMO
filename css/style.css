@@ -143,6 +143,8 @@ button {
   overflow-x: hidden;
   overflow-x: auto;
   transition : color 0.1s linear;    
+
+  text-align: center;
 }
 
 #plot1 {
