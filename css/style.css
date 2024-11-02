@@ -132,8 +132,8 @@ button {
   /* height: calc(50vh - 120px); */
 
 .log {
-  height: 25vh;
-  /* height: fit-content; */
+  /* height: 25vh; */
+  height: fit-content;
   /* width: 100%; */
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
   font-size: 0.8em;
