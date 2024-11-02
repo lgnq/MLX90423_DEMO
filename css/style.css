@@ -134,6 +134,8 @@ button {
   font-family:Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New, monospace;
   font-size: 0.8em;
 
+  overflow-y: auto;
+
   /* border-width: 1px;
   border-style: solid;
   overflow-x: hidden;
