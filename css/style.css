@@ -196,8 +196,12 @@ button {
   }
 
   .log {
-    height: 10vh;
+    height: 20vh;
   }  
+
+  .gridItem {
+    display: none;
+  }
 
   /* .controls {
     display: none;
