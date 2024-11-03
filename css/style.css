@@ -120,12 +120,10 @@ button {
   margin-bottom: 10px;
 }
 
-.row {
+/* .row {
   display: flex;
   align-items: center;
-}
-
-  /* height: calc(50vh - 120px); */
+} */
 
 .log {
   height: 30vh;
