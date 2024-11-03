@@ -197,6 +197,10 @@ button {
     height: 100vh;
   }
 
+  .log {
+    height: 10vh;
+  }  
+
   /* .controls {
     display: none;
   } */
