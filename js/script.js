@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   darkMode.addEventListener('click', clickDarkMode);
   myInput.addEventListener('keydown', writeCmd);
   sampleSize.addEventListener('keydown', setSampleSize);
-  sampleFreq.addEventListener('onChange', setSampleFreq);
+  sampleFreq.addEventListener('Change', changeSampleFreq);
 
   size = parseInt(sampleSize.value);
 
@@ -435,20 +435,21 @@ function setSampleSize(event) {
   }
 }
 
-function setSampleFreq(element) {
+function changeSampleFreq(element) {
     // Write to output stream
     const writer = outputStream.getWriter();
 
     // var selectIndex=element.selectedIndex;
 
     console.log(element.selectedIndex);
-    console.log(element.selectedValue);
+    console.log(sampleFreq.value);
 
     // freq = parseInt(sampleFreq.value);
+    freq = sampleFreq.value;
 
-    // console.log(1000/freq);
+    console.log(1000/freq);
 
-    // writer.write("interval " + (1000/freq) + '\r');
+    writer.write("interval " + (1000/freq) + '\r');
 
     writer.releaseLock();    
 }
