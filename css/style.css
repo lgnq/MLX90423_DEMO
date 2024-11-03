@@ -185,3 +185,17 @@ button {
   overflow-x: auto;
   transition : color 0.1s linear;  
 }
+
+/* Small <= 768px */
+@media screen and (max-width: 768px) {  
+  .charts {
+    grid-template-columns: 1fr;
+    grid-template-areas: initial;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+
+  .controls {
+    display: none;
+  }
+}
