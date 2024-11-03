@@ -171,12 +171,6 @@ button {
 }
 
 #linear_chart {
-  /* position: relative;
-  height:35vh;
-  width: 100%;
-  margin: 10px auto;
-  gap: 10px; */
-
   border-width: 0px;
   border-style: solid;
   overflow-x: hidden;
