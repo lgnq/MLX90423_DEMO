@@ -98,6 +98,13 @@ button {
   margin-left: 8px;
 }
 
+.controls_bottom {
+  height: 40px;
+  line-height: 40px;
+
+  background-color: white;
+}
+
 .charts {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -194,6 +201,10 @@ button {
   }  
 
   .gridItem {
+    display: none;
+  }
+
+  .controls_bottom {
     display: none;
   }
 
