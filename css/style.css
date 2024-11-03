@@ -193,6 +193,8 @@ button {
     grid-template-areas: initial;
     gap: 10px;
     margin-bottom: 0;
+
+    height: 100vh;
   }
 
   .controls {
