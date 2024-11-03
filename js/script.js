@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   darkMode.addEventListener('click', clickDarkMode);
   myInput.addEventListener('keydown', writeCmd);
   sampleSize.addEventListener('keydown', setSampleSize);
-  // sampleFreq.addEventListener('Change', changeSampleFreq);
+  sampleFreq.addEventListener('change', changeSampleFreq);
 
   size = parseInt(sampleSize.value);
 
