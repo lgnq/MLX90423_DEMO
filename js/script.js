@@ -87,7 +87,7 @@ let trace_x = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'Sensor 1',
+  name: 'Reference',
   // fill: 'tozeroy',
   line: {
     color: 'rgb(0, 53, 75)',
@@ -101,7 +101,7 @@ let trace_y = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'Sensor 2',
+  name: 'Multipole',
   line: {
     color: 'rgb(101, 187, 169)',
     width: 1
@@ -114,7 +114,7 @@ let trace_z = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'Sensor 3',
+  name: 'Clamping',
   line: {
     color: 'rgb(219, 65, 64)',
     width: 1
@@ -127,7 +127,7 @@ let trace_s = {
   // x: [0],
   y: [0],
   mode: 'lines',
-  name: 'Sensor 4',
+  name: 'Long thin',
   line: {
     color: 'rgb(238, 163, 32)',
     width: 1
@@ -439,15 +439,9 @@ function changeSampleFreq(element) {
     // Write to output stream
     const writer = outputStream.getWriter();
 
-    // var selectIndex=element.selectedIndex;
-
-    console.log(element.selectedIndex);
-    console.log(sampleFreq.value);
-
-    // freq = parseInt(sampleFreq.value);
     freq = sampleFreq.value;
 
-    console.log(1000/freq);
+    // console.log(1000/freq);
 
     writer.write("interval " + (1000/freq) + '\r');
 
@@ -533,7 +527,7 @@ let data = [
     number: {'prefix': "", 'valueformat': "2.2f"},
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0, 0.1] },
-    title: { text: "Sensor 1" },
+    title: { text: "Reference" },
     gauge: {
       shape: "bullet",
       axis: { range: [-300, 300] },
@@ -556,7 +550,7 @@ let data = [
     number: {'prefix': "", 'valueformat': "2.2f"},
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.3, 0.4] },
-    title: { text: "Sensor 2" },
+    title: { text: "Multipole" },
     gauge: {
       shape: "bullet",
       axis: { range: [-300, 300] },
@@ -580,7 +574,7 @@ let data = [
     // valueformat: '.2f',
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.6, 0.7] },
-    title: { text: "Sensor 3" },
+    title: { text: "Clamping" },
     gauge: {
       shape: "bullet",
       axis: { range: [-300, 300] },
@@ -603,7 +597,7 @@ let data = [
     number: { prefix: "", valueformat: "2.2f" },
     delta: { reference: 200 },
     domain: { x: [0.25, 1], y: [0.9, 1] },
-    title: { text: "Sensor 4" },
+    title: { text: "Long thin" },
     gauge: {
       shape: "bullet",
       axis: { range: [-300, 300] },
