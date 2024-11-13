@@ -617,7 +617,7 @@ let data = [
 
 var layout = {
   title: {
-    text: 'linear travel detected by MLX90423(%)',
+    text: 'Linear travel detected by MLX90423(%)',
     font: {
         // family: 'Arial, monospace',
         family: 'Arial, sans-serif', // Set the font family to Arial
