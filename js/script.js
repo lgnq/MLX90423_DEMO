@@ -530,7 +530,7 @@ let data = [
     title: { text: "Reference" },
     gauge: {
       shape: "bullet",
-      axis: { range: [-300, 300] },
+      axis: { range: [0, 100] },
       // threshold: {
       //   line: { color: "red", width: 3 },
       //   thickness: 0.75,
@@ -538,7 +538,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray"}
+        { range: [0, 100], color: "lightgray"}
       ],
       bar: { color: "#00354B", thickness: 0.8 }
     }
@@ -553,7 +553,7 @@ let data = [
     title: { text: "Multipole" },
     gauge: {
       shape: "bullet",
-      axis: { range: [-300, 300] },
+      axis: { range: [0, 100] },
       // threshold: {
       //   line: { color: "black", width: 2 },
       //   thickness: 0.75,
@@ -561,7 +561,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray" }
+        { range: [0, 100], color: "lightgray" }
       ],
       bar: { color: "#65BBA9", thickness: 0.8 }
     }
@@ -577,7 +577,7 @@ let data = [
     title: { text: "Clamping" },
     gauge: {
       shape: "bullet",
-      axis: { range: [-300, 300] },
+      axis: { range: [0, 100] },
       // threshold: {
       //   line: { color: "black", width: 2 },
       //   thickness: 0.75,
@@ -585,7 +585,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray" }
+        { range: [0, 100], color: "lightgray" }
       ],
       bar: { color: "#DB4140", thickness: 0.8 }
     }
@@ -600,7 +600,7 @@ let data = [
     title: { text: "Long thin" },
     gauge: {
       shape: "bullet",
-      axis: { range: [-300, 300] },
+      axis: { range: [0, 100] },
       // threshold: {
       //   line: { color: "black", width: 2 },
       //   thickness: 0.75,
@@ -608,7 +608,7 @@ let data = [
       // },
       steps: [
         // { range: [-300, 0], color: "gray" },
-        { range: [-300, 300], color: "lightgray" }
+        { range: [0, 100], color: "lightgray" }
       ],
       bar: { color: "#EEA320", thickness: 0.8 }
     }
@@ -617,7 +617,7 @@ let data = [
 
 var layout = {
   title: {
-    text: 'linear travel detected by MLX90423(mm)',
+    text: 'linear travel detected by MLX90423(%)',
     font: {
         // family: 'Arial, monospace',
         family: 'Arial, sans-serif', // Set the font family to Arial
