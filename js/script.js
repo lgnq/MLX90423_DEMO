@@ -293,7 +293,7 @@ function logData(line) {
   }
 
   if (autoscroll.checked) {
-    log.scrollTop = log.scrollHeight
+    log.scrollTop = log.scrollHeight;
   }
 }
 
